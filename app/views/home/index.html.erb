@@ -1,1 +1,5 @@
-<h1>Welcome, <%= link_to "Log In", "https://github.com/login/oauth/authorize?client_id=73e674ea824c6fbf120b&scope=repo" %>
+<% if current_user %>
+  <h1>Welcome, <%= "#{current_user.username}" %> </h1>
+<% else %>
+  <%= link_to 'Sign In with Github', '/auth/github' %>
+<% end %>
