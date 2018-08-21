@@ -1,5 +1,7 @@
 <% if current_user %>
   <h1>Welcome, <%= "#{current_user.username}" %> </h1>
+  <p> <%= current_user.find_information %></p>
+  <%= link_to 'Sign Out', '/signout' %>
 <% else %>
   <%= link_to 'Sign In with Github', '/auth/github' %>
 <% end %>
