@@ -10,7 +10,7 @@ class User < ApplicationRecord
     end
   end
 
-  def find_information
-    doc = Nokogiri::HTML(open('https://github.com/username'))
-  end
+  # def find_information
+  #   doc = Nokogiri::HTML(open('https://github.com/username'))
+  # end
 end
