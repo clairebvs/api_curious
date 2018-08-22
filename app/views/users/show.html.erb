@@ -1,0 +1,8 @@
+<% if current_user %>
+  <h1> Welcome, <%= "#{current_user.username}" %></h1>
+  <h3> Personal Information </h3>
+  <div class='informations'>
+    <p>Number of followers : <%= @info[:followers] %><br></p>
+    <p>Number of repos : <%= @info %></p>
+  </div>
+<% end %>
