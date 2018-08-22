@@ -1,0 +1,8 @@
+<% if current_user %>
+  <h1> Welcome, <%= "#{current_user.username}" %></h1>
+  <h3> Personal Information </h3>
+  <div class='informations' >
+    Number of followers : <%= @followers.length %><br>
+    Number of repos : <%= "#{current_user.public_repos}" %>
+  </div>
+<% end %>
