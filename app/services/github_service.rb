@@ -8,6 +8,10 @@ class GithubService
     get_json("/users/#{current_user.nickname}")
   end
 
+  def user_followers
+    get_json("/users/#{current_user.nickname}/followers")
+  end
+
   private
 
   def conn

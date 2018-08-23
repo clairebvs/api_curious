@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :user do
-    provider
-    uid
-    username
-    oauth_token ENV['TEST_TOKEN']
-    image
-    nickname "clairebvs"
+    provider {"github"}
+    uid {"c.l"}
+    username {"Claire B.L"}
+    oauth_token {ENV['TEST_TOKEN']}
+    image {"https://pic.com"}
+    nickname {"clairebvs"}
   end
 end

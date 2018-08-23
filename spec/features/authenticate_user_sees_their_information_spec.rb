@@ -2,6 +2,7 @@ require "rails_helper"
 
 feature 'user login in to their account' do
   scenario 'visit dashboard and sees information about their account' do
+    create(:user)
 
     visit '/dashboard'
 
