@@ -8,7 +8,7 @@ feature 'user login in to their account' do
 
     expect(page).to have_content("Welcome")
     within (".informations") do
-      expect(page).to have_content("Number of followers : ")
+      expect(page).to have_content("Followers : ")
       expect(page).to have_content("Number of repos: ")
     end
   end

@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
 
-  def new
-  end
-
   def show
-    # @github_user = FollowerPresenter.followers
     @github_user = FollowerPresenter.new(current_user)
 
     # conn = Faraday.new(url: "https://api.github.com") do |faraday|

@@ -2,10 +2,11 @@
   <h1> Welcome, <%= "#{current_user.username}" %></h1>
   <h3> Personal Information </h3>
   <div class='informations'>
-    <p> Followers :
+    <p> Followers :<br>
       <% @github_user.followers.each do |follower| %>
-        <%= follower.login  %>
-        <%= follower.url  %>
+        Login : <%= follower.login  %><br>
+        URL : <%= follower.url  %><br>
+        id : <%= follower.id  %><br>
       <% end %>
              <br></p>
     <p>Number of repos : <%= %></p>
