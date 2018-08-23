@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/signout", to: "sessions#destroy", as: 'signout'
 
   get '/dashboard', to: "users#show"
+  get '/repository', to: "repositories#index"
 end
