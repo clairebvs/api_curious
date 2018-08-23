@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @github_user = FollowerPresenter.new
+    # @github_user = FollowerPresenter.followers
+    @github_user = FollowerPresenter.new(current_user)
 
     # conn = Faraday.new(url: "https://api.github.com") do |faraday|
     #   faraday.headers["Authorization"] = "token #{current_user.oauth_token}"

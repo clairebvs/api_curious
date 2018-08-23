@@ -4,8 +4,8 @@ class FollowerPresenter
   end
 
   def followers
-    @git_service.user_followers.map each do |follower_data|
+    @git_service.user_followers.map do |follower_data|
       Follower.new(follower_data)
-    end 
+    end
   end
 end
