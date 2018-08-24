@@ -44,8 +44,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rubocop-rspec'
   gem 'capybara', '~> 2.4.0'
-  gem 'webmock'
-  gem 'vcr'
+
 end
 
 group :development do
