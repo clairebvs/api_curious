@@ -31,7 +31,7 @@ describe GithubUser do
         github_user = GithubUser.new(user)
 
         expect(github_user.starred_repositories.count).to eq(2)
-        expect(github_user.repositories.first).to be_a(StarredRepository)
+        expect(github_user.starred_repositories.first).to be_a(StarredRepository)
       end
     end
   end
