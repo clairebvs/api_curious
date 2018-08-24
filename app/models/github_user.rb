@@ -12,6 +12,10 @@ class GithubUser
   end
 
   def starred_repositories
+    @github_service.user_starred_repositories.map do |starred_repo|
+      StarredRepository.new(starred_repo)
+    end
+
     conn = Faraday.new(url: "https://api.github.com") do |faraday|
       faraday.headers["Authorization"] = "token #{@current_user.oauth_token}"
       faraday.adapter Faraday.default_adapter
