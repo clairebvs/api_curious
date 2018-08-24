@@ -9,17 +9,11 @@ class GithubUser
     @github_service.user_repositories.map do |user_repo|
       Repository.new(user_repo)
     end
-
-    # conn = Faraday.new(url: "https://api.github.com") do |faraday|
-    #   faraday.headers["Authorization"] = "token #{@current_user.oauth_token}"
-    #   faraday.adapter Faraday.default_adapter
-    # end
-    #
-    # response = conn.get("/users/#{@current_user.nickname}/repos")
-    #
-    # @repositories = JSON.parse(response.body, symbolize_names: true).map do |repo|
-    #   Repository.new(repo)
-    # end
   end
 
+  def starred_repositories
+    @github_service.user_starred_repositories.map do |starred_repo|
+      StarredRepository.new(starred_repo)
+    end
+  end
 end

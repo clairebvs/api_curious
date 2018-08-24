@@ -1,0 +1,7 @@
+<h1>List of starred repositories : </h1>
+<% @starred_repositories.each do |repo|  %>
+<div class=".starred_repo">
+  <%= repo.name %><br>
+  <%= repo.id %><br>
+</div>
+<% end %>
