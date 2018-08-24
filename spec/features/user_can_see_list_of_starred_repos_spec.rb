@@ -12,7 +12,7 @@ feature 'user logged in' do
 
     visit '/starred'
 
-    expect(page).to have_css('.starred_repo', count: 1)
+    expect(page).to have_css('.starred_repo', count: 2)
     expect(page).to have_content("List of starred repositories :")
 
     within(first('.starred_repo')) do
