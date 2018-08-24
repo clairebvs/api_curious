@@ -10,6 +10,8 @@ feature 'user logged in' do
 
     WebMock.stub_request(:get, "https://api.github.com//users/user/starred").to_return(status: 200, body: json_response)
 
+    visit '/starred'
+
     expect(page).to have_css('.starred_repo', count: 2)
     expect(page).to have_content("List of starred repositories :")
 
