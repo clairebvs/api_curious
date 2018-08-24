@@ -16,6 +16,10 @@ class GithubService
     get_json("/users/#{@current_user.nickname}/repos")
   end
 
+  def user_starred_repositories
+    get_json("/users/#{@current_user.nickname}/starred")
+  end
+
   private
 
   def conn
