@@ -15,8 +15,10 @@
 
 /node_modules
 /yarn-error.log
+/spec/cassettes
 
 .byebug_history
+
 
 # Ignore application configuration
 /config/application.yml

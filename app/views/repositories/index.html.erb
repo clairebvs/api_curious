@@ -1,0 +1,9 @@
+
+  <h1>List of repositories : </h1>
+  <% @repositories.each.with_index(1) do |repo, i|  %>
+  <div class="repository">
+    <%= i %>
+    <%= repo.name %><br>
+    <%= repo.id %><br>
+  </div>
+  <% end %>
