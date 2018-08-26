@@ -45,6 +45,7 @@ group :development, :test do
   gem 'rubocop-rspec'
   gem 'capybara', '~> 2.4.0'
   gem 'webmock'
+  gem 'materialize-sass'
 end
 
 group :development do
