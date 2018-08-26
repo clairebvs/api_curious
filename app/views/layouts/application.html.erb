@@ -6,9 +6,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu">
+        <div class="navbar-end" >
+          <div class="navbar-item" >
+            <% if current_user %>
+              <a class="control"> <%= link_to 'Sign Out', '/signout', class: "button is-link" %>
+              </a>
+          </div>
+          <% else %>
+          <a class="control"><%= button_to 'Sign In with GitHub', '/auth/github', method: :get, class: "button is-link" %></a>
+          <% end  %>
+        </div>
+      </div>
+    </nav>
+  <%= yield %>
   </body>
 </html>

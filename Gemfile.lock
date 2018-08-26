@@ -44,6 +44,8 @@ GEM
     ast (2.4.0)
     bindex (0.5.0)
     builder (3.2.3)
+    bulma-rails (0.7.1)
+      sass (~> 3.2)
     byebug (10.0.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -128,7 +130,7 @@ GEM
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
-    pg (1.0.0)
+    pg (1.1.0)
     powerpack (0.1.2)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -191,7 +193,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.28.0)
+    rubocop-rspec (1.29.0)
       rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
@@ -241,6 +243,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bulma-rails (~> 0.7.1)
   byebug
   capybara (~> 2.4.0)
   coffee-rails (~> 4.2)
