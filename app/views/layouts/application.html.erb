@@ -16,11 +16,11 @@
         <div class="navbar-end" >
           <div class="navbar-item" >
             <% if current_user %>
-              <a class="control"> <%= link_to 'Sign Out', '/signout', class: "button is-link" %>
+              <a class="control"> <%= link_to 'Sign Out', '/signout', class: "button is-primary is-inverted" %>
               </a>
           </div>
           <% else %>
-          <a class="control"><%= button_to 'Sign In with GitHub', '/auth/github', method: :get, class: "button is-link" %></a>
+          <a class="control"><%= button_to 'Sign In with GitHub', '/auth/github', method: :get, class: "button is-primary is-inverted" %></a>
           <% end  %>
         </div>
       </div>
